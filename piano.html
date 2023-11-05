@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Octave</title>
+    <style>
+        .piano {
+            display: flex;
+            align-items: flex-start;
+            width: 700px;
+            height: 200px;
+        }
+
+        .key {
+            cursor: pointer;
+            height: 180px;
+            border: 1px solid #000;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .white {
+            background: #fff;
+            width: 80px;
+        }
+
+        .black {
+            background: #000;
+            width: 50px;
+            height: 120px;
+            margin: 0 -25px;
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="piano">
+        <!-- White keys -->
+        <div class="key white"></div>
+        <div class="key white"></div>
+        <div class="key white"></div>
+        <div class="key white"></div>
+        <div class="key white"></div>
+        <div class="key white"></div>
+        <div class="key white"></div>
+
+        <!-- Black keys -->
+        <div class="key black" style="left: 90px;"></div>
+        <div class="key black" style="left: 170px;"></div>
+        <div style="width: 80px; height: 0; position: relative;">
+        </div>
+        <div class="key black" style="left: 335px;"></div>
+        <div class="key black" style="left: 415px;"></div>
+        <div class="key black" style="left: 495px;"></div>
+    </div>
+
+</body>
+
+</html>
