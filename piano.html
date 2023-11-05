@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Piano</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
         .piano {
             display: flex;
             align-items: flex-start;
@@ -40,7 +48,7 @@
 
 <body>
 
-    <div class="piano" id="piano">
+    <!-- <div class="piano" id="piano">
         <div class="key white" data-note="C"></div>
         <div class="key white" data-note="D"></div>
         <div class="key white" data-note="E"></div>
@@ -66,8 +74,89 @@
                 playNote(this.dataset.note);
             });
         });
+    </script> -->
+
+    <script>
+        function playNote(note) {
+            let audio = new Audio(`${note}.wav`);
+            audio.play();
+        }
     </script>
 
+    <div class="piano" id="piano">
+        <div class="key white" id="C"></div>
+        <script>
+            document.getElementById('C').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key white" id="D"></div>
+        <script>
+            document.getElementById('D').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key white" id="E"></div>
+        <script>
+            document.getElementById('E').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key white" id="F"></div>
+        <script>
+            document.getElementById('F').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key white" id="G"></div>
+        <script>
+            document.getElementById('G').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key white" id="A"></div>
+        <script>
+            document.getElementById('A').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key white" id="B"></div>
+        <script>
+            document.getElementById('B').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key black" id="Db" style="left: 80px;"></div>
+        <script>
+            document.getElementById('Db').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key black" id="Eb" style="left: 160px;"></div>
+        <script>
+            document.getElementById('Eb').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key black" id="Gb" style="left: 325px;"></div>
+        <script>
+            document.getElementById('Gb').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key black" id="Ab" style="left: 405px;"></div>
+        <script>
+            document.getElementById('Ab').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+        <div class="key black" id="Bb" style="left: 485px;"></div>
+        <script>
+            document.getElementById('Bb').addEventListener('click', function () {
+                playNote(this.id);
+            });
+        </script>
+    </div>
 </body>
 
 </html>
